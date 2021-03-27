@@ -2,6 +2,7 @@ import logo from './logo.svg';
 import './App.css';
 import GoodBtn from './component/GoodBtn.jsx';
 import BadBtn from './component/BadBtn.jsx';
+import { Grid } from '@material-ui/core';
 
 function App() {
   return (
@@ -19,8 +20,15 @@ function App() {
         >
           Learn React
         </a>
-        <GoodBtn />
-        <BadBtn />
+        <Grid
+          container
+          direction="row"
+          justify="center"
+          alignItems="center"
+        >
+          <GoodBtn />
+          <BadBtn />
+        </Grid>
       </header>
     </div>
   );

@@ -1,3 +1,6 @@
+# 現在の状況
+現在のWebアプリの状態は[こちら](https://hideaki-nakagawa.github.io/baby-checker)
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

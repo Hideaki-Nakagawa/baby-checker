@@ -1,11 +1,9 @@
 import logo from './logo.svg';
 import './App.css';
-import Btn from './component/Btn.jsx';
+import GoodBtn from './component/GoodBtn.jsx';
+import BadBtn from './component/BadBtn.jsx';
 
 function App() {
-  const showMessage = () =>{
-    console.log('Push');
-  }
   return (
     <div className="App">
       <header className="App-header">
@@ -21,7 +19,8 @@ function App() {
         >
           Learn React
         </a>
-        <Btn title="テスト" className="btn btn-primary" func={showMessage}/>
+        <GoodBtn />
+        <BadBtn />
       </header>
     </div>
   );

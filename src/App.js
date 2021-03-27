@@ -1,36 +1,42 @@
 import logo from './logo.svg';
 import './App.css';
-import GoodBtn from './component/GoodBtn.jsx';
-import BadBtn from './component/BadBtn.jsx';
-import { Grid } from '@material-ui/core';
+import GoodBtn from './component/atoms/GoodBtn.jsx';
+import BadBtn from './component/atoms/BadBtn.jsx';
+import GenderRadioBtnGroup from './component/molecules/GenderRadioBtnGroup.jsx';
+import { createMuiTheme, CssBaseline, Grid, ThemeProvider } from '@material-ui/core';
 
 function App() {
+  const theme = createMuiTheme({
+    palette: {
+      type: 'dark',
+      // type: 'light',
+    }
+  })
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-        <Grid
-          container
-          direction="row"
-          justify="center"
-          alignItems="center"
-        >
-          <GoodBtn />
-          <BadBtn />
-        </Grid>
-      </header>
-    </div>
+    <ThemeProvider theme={theme}>
+      <CssBaseline />
+      <div>
+        <body>
+          <Grid
+            container
+            direction="column"
+            justify="center"
+            alignItems="center"
+          >
+            <GenderRadioBtnGroup />
+          </Grid>
+          <Grid
+            container
+            direction="row"
+            justify="center"
+            alignItems="center"
+          >
+            <GoodBtn />
+            <BadBtn />
+          </Grid>
+        </body>
+      </div>
+    </ThemeProvider>
   );
 }
 

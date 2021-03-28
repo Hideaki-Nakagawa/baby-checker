@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { makeStyles, createStyles, FormControl, FormControlLabel, FormLabel, RadioGroup, Radio } from '@material-ui/core';
 
-
+/** @summary style define*/
 const useStyles = makeStyles((theme) =>
     createStyles({
         "formControl": {
@@ -10,9 +10,7 @@ const useStyles = makeStyles((theme) =>
     }),
 );
 
-/**
- * 性別選択のラジオボタン コンポーネント
- */
+/** @summary 性別選択のラジオボタン コンポーネント */
 const GenderRadioBtnGroup = () => {
 
     /** @summary state hook */

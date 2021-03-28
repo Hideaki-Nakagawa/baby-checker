@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { createStyles, FormControl, InputLabel, makeStyles, MenuItem, Select } from '@material-ui/core';
 
+/** @summary style define*/
 const useStyles = makeStyles((theme) =>
     createStyles({
         "formControl": {
@@ -10,13 +11,11 @@ const useStyles = makeStyles((theme) =>
     }),
 );
 
-/**
- * @summary 月齢選択 コンポーネント
- */
+/** @summary 月齢選択 コンポーネント */
 const AgeSelect = () => {
 
     /** @summary state hook */
-    const [age, setAge] = useState('');
+    const [age, setAge] = useState('1');
     const handleChange = (event) => {
         setAge(event.target.value);
     };
@@ -41,6 +40,7 @@ const AgeSelect = () => {
                 id="age_select"
                 value={age}
                 onChange={handleChange}
+                variant="standard"
             >
                 {makeMonthItems()}
             </Select>

@@ -4,12 +4,13 @@ import GoodBtn from './component/atoms/GoodBtn.jsx';
 import BadBtn from './component/atoms/BadBtn.jsx';
 import GenderRadioBtnGroup from './component/molecules/GenderRadioBtnGroup.jsx';
 import { createMuiTheme, CssBaseline, Grid, ThemeProvider } from '@material-ui/core';
+import AgeSelect from './component/molecules/AgeSelect';
 
 function App() {
   const theme = createMuiTheme({
     palette: {
       type: 'dark',
-      // type: 'light',
+      //type: 'light',
     }
   })
   return (
@@ -24,6 +25,7 @@ function App() {
             alignItems="center"
           >
             <GenderRadioBtnGroup />
+            <AgeSelect />
           </Grid>
           <Grid
             container

@@ -3,12 +3,12 @@ import ThumbDownOutlinedIcon from '@material-ui/icons/ThumbDownOutlined';
 import { IconButton } from '@material-ui/core';
 
 /**
- * BADボタン コンポーネント
+ * @summary BADボタン コンポーネント
  */
 const BadBtn = (props) => {
 
   /**
-   * @name state hook
+   * @summary state hook
    * @details 状態管理をする @n
    * メンバー変数を定義して、その値を書き換える関数を定義するみたいなとこ
    */
@@ -18,7 +18,7 @@ const BadBtn = (props) => {
   }
 
   /**
-   * @name effect hook
+   * @summary effect hook
    * @details ライフサイクルを管理する @n
    * コンストラクタ, 更新, デストラクタで行う処理を定義するみたいなとこ
    * @attention デストラクタは毎回走る

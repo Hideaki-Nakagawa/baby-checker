@@ -46,7 +46,7 @@ const HeightInputField = () => {
                 endAdornment={<InputAdornment position="end">cm</InputAdornment>}
                 aria-describedby="height_input_helper_text"
                 inputProps={{
-                    'maxlength' : 6,
+                    'maxLength' : 6,
                     'aria-label': 'height',
                 }}
             />

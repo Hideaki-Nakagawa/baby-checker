@@ -1,0 +1,6 @@
+export {default as AgeSelect} from './AgeSelect' 
+export {default as GenderRadioBtnGroup} from './GenderRadioBtnGroup'
+export {default as HeightInputField} from './HeightInputField'
+export {default as WeightInputField} from './WeightInputField'
+export {default as BadBtn} from './BadBtn'
+export {default as GoodBtn} from './GoodBtn'

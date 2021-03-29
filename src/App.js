@@ -1,12 +1,7 @@
 import logo from './logo.svg';
 import './App.css';
-import GoodBtn from './component/atoms/GoodBtn';
-import BadBtn from './component/atoms/BadBtn';
-import GenderRadioBtnGroup from './component/molecules/GenderRadioBtnGroup';
-import { createMuiTheme, CssBaseline, Grid, ThemeProvider } from '@material-ui/core';
-import AgeSelect from './component/molecules/AgeSelect';
-import WeightInputField from './component/molecules/WeightInputField';
-import HeightInputField from './component/molecules/HeightInputField';
+import {AgeSelect, GenderRadioBtnGroup, WeightInputField, HeightInputField, GoodBtn, BadBtn} from './component/molecules';
+import {createMuiTheme, CssBaseline, Grid, ThemeProvider } from '@material-ui/core';
 
 function App() {
   const theme = createMuiTheme({

@@ -27,7 +27,7 @@ const AgeSelect = () => {
     const makeMonthItems = () => {
         const items = [];
         for (let month = 1; month <= 24; month++) {
-            items.push(<MenuItem value={month}>{month}ヵ月</MenuItem>)
+            items.push(<MenuItem key={month} value={month}>{month}ヵ月</MenuItem>)
         }
         return items;
     }

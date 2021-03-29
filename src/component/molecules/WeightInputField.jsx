@@ -46,7 +46,7 @@ const WeightInputField = () => {
                 endAdornment={<InputAdornment position="end">kg</InputAdornment>}
                 aria-describedby="weight_input_helper_text"
                 inputProps={{
-                    'maxlength' : 4,
+                    'maxLength' : 4,
                     'aria-label': 'weight',
                 }}
             />

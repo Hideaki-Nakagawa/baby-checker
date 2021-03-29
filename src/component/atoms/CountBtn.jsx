@@ -1,11 +1,10 @@
 import React, { useState, useEffect } from 'react';
-import ThumbUpOutlinedIcon from '@material-ui/icons/ThumbUpOutlined';
 import { IconButton } from '@material-ui/core';
 
 /**
- * @summary GOODボタン コンポーネント
+ * @summary カウントボタン コンポーネント
  */
-const GoodBtn = (props) => {
+const CountBtn = (props) => {
 
   /**
    * @summary state hook
@@ -24,19 +23,20 @@ const GoodBtn = (props) => {
    * @attention デストラクタは毎回走る
    */
   useEffect(() => {
-    const el = document.getElementById('good_btn');
+    const el = document.getElementById(props.id);
     el.addEventListener('click', countUp);
     return () => {
       el.removeEventListener('click', countUp)
     }
   });
 
+  const Icon = props.icon;
   return (
-    <IconButton id={"good_btn"} aria-label="good">
-      <ThumbUpOutlinedIcon />
+    <IconButton id={props.id} aria-label={props.label}>
+      <Icon />
       {count}
     </IconButton>
   )
 }
 
-export default GoodBtn;
+export default CountBtn;

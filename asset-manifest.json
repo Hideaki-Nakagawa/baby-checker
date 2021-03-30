@@ -1,23 +1,22 @@
 {
   "files": {
     "main.css": "/baby-checker/static/css/main.9d5b29c0.chunk.css",
-    "main.js": "/baby-checker/static/js/main.ba033451.chunk.js",
-    "main.js.map": "/baby-checker/static/js/main.ba033451.chunk.js.map",
+    "main.js": "/baby-checker/static/js/main.1cf44a45.chunk.js",
+    "main.js.map": "/baby-checker/static/js/main.1cf44a45.chunk.js.map",
     "runtime-main.js": "/baby-checker/static/js/runtime-main.cf4ac88d.js",
     "runtime-main.js.map": "/baby-checker/static/js/runtime-main.cf4ac88d.js.map",
-    "static/js/2.278e7816.chunk.js": "/baby-checker/static/js/2.278e7816.chunk.js",
-    "static/js/2.278e7816.chunk.js.map": "/baby-checker/static/js/2.278e7816.chunk.js.map",
+    "static/js/2.32abbce8.chunk.js": "/baby-checker/static/js/2.32abbce8.chunk.js",
+    "static/js/2.32abbce8.chunk.js.map": "/baby-checker/static/js/2.32abbce8.chunk.js.map",
     "static/js/3.792c7648.chunk.js": "/baby-checker/static/js/3.792c7648.chunk.js",
     "static/js/3.792c7648.chunk.js.map": "/baby-checker/static/js/3.792c7648.chunk.js.map",
     "index.html": "/baby-checker/index.html",
     "static/css/main.9d5b29c0.chunk.css.map": "/baby-checker/static/css/main.9d5b29c0.chunk.css.map",
-    "static/js/2.278e7816.chunk.js.LICENSE.txt": "/baby-checker/static/js/2.278e7816.chunk.js.LICENSE.txt",
-    "static/media/logo.6ce24c58.svg": "/baby-checker/static/media/logo.6ce24c58.svg"
+    "static/js/2.32abbce8.chunk.js.LICENSE.txt": "/baby-checker/static/js/2.32abbce8.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.cf4ac88d.js",
-    "static/js/2.278e7816.chunk.js",
+    "static/js/2.32abbce8.chunk.js",
     "static/css/main.9d5b29c0.chunk.css",
-    "static/js/main.ba033451.chunk.js"
+    "static/js/main.1cf44a45.chunk.js"
   ]
 }

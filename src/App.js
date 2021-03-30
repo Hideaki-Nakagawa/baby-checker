@@ -1,4 +1,3 @@
-import logo from './logo.svg';
 import './App.css';
 import {AgeSelect, GenderRadioBtnGroup, WeightInputField, HeightInputField, GoodBtn, BadBtn} from './component/molecules';
 import {createMuiTheme, CssBaseline, Grid, ThemeProvider } from '@material-ui/core';

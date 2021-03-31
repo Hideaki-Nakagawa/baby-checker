@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import clsx from 'clsx';
-import { makeStyles, createStyles, FormControl, FormHelperText, Input, InputAdornment} from '@material-ui/core';
+import { makeStyles, createStyles, FormControl, FormHelperText, Input, InputAdornment } from '@material-ui/core';
 
 /** @summary style define*/
 const useStyles = makeStyles((theme) =>
@@ -10,9 +10,6 @@ const useStyles = makeStyles((theme) =>
         },
         withoutLabel: {
             marginTop: theme.spacing(3),
-        },
-        textField: {
-            width: '10em',
         },
     }),
 );
@@ -31,37 +28,38 @@ const useStyles = makeStyles((theme) =>
 const InputField = (props) => {
 
     /** @summary state hook */
-    const [values, setValues] = useState({
-        text: "",
-    });
+    const [myText, setText] = useState("test");
 
     /** 
      * @summary state change 
-     * @details 複数のステートを持つ場合のステート変更関数
+     * @details ステートを変更して、親要素に値を投げる
      */
-    const handleChange = (prop) => (event) => {
-        setValues({ ...values, [prop]: event.target.value });
+    const handleChange = () => (e) => {
+        setText(e.target.value);
+        if (props.onChange) {
+            props.onChange(myText);
+        }
     };
 
     /** @summary style hook api */
     const classes = useStyles();
 
     return (
-        <FormControl className={clsx(classes.margin, classes.withoutLabel, classes.textField)}>
+        <FormControl className={clsx(classes.margin, classes.withoutLabel, props.add_classes.Size)}>
             <FormHelperText id={props.title_id}>{props.title_text}</FormHelperText>
             <Input
                 id={props.id}
-                value={values.text}
-                
-                onChange={handleChange('text')}
+                value={myText}
+                onChange={handleChange()}
                 endAdornment={<InputAdornment position="end">{props.unit_text}</InputAdornment>}
                 aria-describedby={props.title_id}
                 inputProps={{
-                    'maxLength' : props.maxLength,
+                    'maxLength': props.maxLength,
                     'aria-label': props.label,
                 }}
             />
         </FormControl>
     )
 }
+
 export default InputField;

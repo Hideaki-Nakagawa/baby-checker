@@ -11,12 +11,17 @@ const useStyles = makeStyles((theme) =>
 );
 
 /** @summary 性別選択のラジオボタン コンポーネント */
-const GenderRadioBtnGroup = () => {
+const GenderRadioBtnGroup = (props) => {
 
     /** @summary state hook */
-    const [value, setValue] = useState('male');
+    const [myGender, setGender] = useState('');
+
     const handleChange = (event) => {
-        setValue(event.target.value);
+        const newValue = event.target.value;
+        setGender(newValue);
+        if (props.onChange) {
+            props.onChange(newValue);
+        }
     };
 
     /** @summary style hook api */
@@ -25,7 +30,7 @@ const GenderRadioBtnGroup = () => {
     return (
         <FormControl component="fieldset" className={classes.formControl}>
             <FormLabel component="legend">性別</FormLabel>
-            <RadioGroup aria-label="gender" name="gender" value={value} onChange={handleChange}>
+            <RadioGroup aria-label="gender" name="gender" value={myGender} onChange={handleChange}>
                 <FormControlLabel value="male" control={<Radio />} label="おとこの子" />
                 <FormControlLabel value="female" control={<Radio />} label="おんなの子" />
             </RadioGroup>

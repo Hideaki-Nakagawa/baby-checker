@@ -28,16 +28,17 @@ const useStyles = makeStyles((theme) =>
 const InputField = (props) => {
 
     /** @summary state hook */
-    const [myText, setText] = useState("test");
+    const [myText, setText] = useState('');
 
     /** 
      * @summary state change 
      * @details ステートを変更して、親要素に値を投げる
      */
-    const handleChange = () => (e) => {
-        setText(e.target.value);
+    const handleChange = (event) => {
+        const newValue = event.target.value;
+        setText(newValue);
         if (props.onChange) {
-            props.onChange(myText);
+            props.onChange(newValue);
         }
     };
 
@@ -50,7 +51,7 @@ const InputField = (props) => {
             <Input
                 id={props.id}
                 value={myText}
-                onChange={handleChange()}
+                onChange={handleChange}
                 endAdornment={<InputAdornment position="end">{props.unit_text}</InputAdornment>}
                 aria-describedby={props.title_id}
                 inputProps={{

@@ -26,8 +26,8 @@ function App() {
               justify="center"
               alignItems="center"
             >
-              <GenderRadioBtnGroup />
-              <AgeSelect />
+              <GenderRadioBtnGroup onChange={handleChange} />
+              <AgeSelect onChange={handleChange} />
             </Grid>
             <Grid
               container

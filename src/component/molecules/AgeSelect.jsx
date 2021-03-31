@@ -12,12 +12,21 @@ const useStyles = makeStyles((theme) =>
 );
 
 /** @summary 月齢選択 コンポーネント */
-const AgeSelect = () => {
+const AgeSelect = (props) => {
 
     /** @summary state hook */
-    const [age, setAge] = useState('1');
+    const [myAge, setAge] = useState('');
+
+    /** 
+     * @summary state change 
+     * @details ステートを変更して、親要素に値を投げる
+     */
     const handleChange = (event) => {
-        setAge(event.target.value);
+        const newValue = event.target.value;
+        setAge(newValue);
+        if (props.onChange) {
+            props.onChange(newValue);
+        }
     };
 
     /** @summary style hook api */
@@ -38,7 +47,7 @@ const AgeSelect = () => {
             <Select
                 labelId="age_select_label"
                 id="age_select"
-                value={age}
+                value={myAge}
                 onChange={handleChange}
                 variant="standard"
             >

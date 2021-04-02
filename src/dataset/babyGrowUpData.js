@@ -1,5 +1,5 @@
-const babyGrowUpData = {
-    "boy": [
+const BabyGrowUpData = {
+    "male": [
         {
             "month": 0,
             "weight": 2.98,
@@ -313,7 +313,7 @@ const babyGrowUpData = {
             ]
         }
     ],
-    "girl": [
+    "female": [
         {
             "month": 0,
             "weight": 2.91,
@@ -629,4 +629,4 @@ const babyGrowUpData = {
     ]
 }
 
-export default babyGrowUpData
+export default BabyGrowUpData

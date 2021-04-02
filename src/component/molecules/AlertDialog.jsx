@@ -3,15 +3,18 @@ import { Button, Dialog, DialogActions, DialogContent, DialogContentText, Dialog
 
 const AlertDialog = (props) => {
     const [open, setOpen] = useState(false);
+    const [result, setResult] = useState('');
 
     const handleClickOpen = () => {
+      const result = props.onClick();
+      setResult(result);
       setOpen(true);
     };
   
     const handleClose = () => {
       setOpen(false);
     };
-  
+
     return (
       <div>
         <Button variant="contained" color="primary" onClick={handleClickOpen}>
@@ -26,7 +29,7 @@ const AlertDialog = (props) => {
           <DialogTitle id="alert-dialog-title">{"診断結果"}</DialogTitle>
           <DialogContent>
             <DialogContentText id="alert-dialog-description">
-              {props.content}
+              {result}
             </DialogContentText>
           </DialogContent>
           <DialogActions>

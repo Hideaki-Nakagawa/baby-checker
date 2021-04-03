@@ -7,8 +7,8 @@ import { BabyGrowUpData } from './dataset';
 function App() {
   const theme = createMuiTheme({
     palette: {
-      type: 'dark',
-      //type: 'light',
+      //type: 'dark',
+      type: 'light',
     }
   })
 
@@ -21,7 +21,6 @@ function App() {
 
   /** @summary show state*/
   const handleChange = (prop) => (data) => {
-    console.log(data);
     setValues({ ...values, [prop]: data });
   }
 
@@ -47,12 +46,23 @@ function App() {
   /**
    * @summary 入力された体重と身長が適正か診断する
    * @param {*} props : sampleデータ
+   * @return 診断結果の文字列を返す
    */
   const diagnose = (props) => {
-    let ret;
     const sample = props[0];
-    sample.wRange[0] <= values.weight && values.weight <= sample.wRange[1] ? ret = 'OK' : ret = 'NG';
-    return ret;
+    let wRet = sample.wRange[0] <= values.weight && values.weight <= sample.wRange[1] ? 'OK' : 'NG';
+    let hRet = sample.hRange[0] <= values.height && values.height <= sample.hRange[1] ? 'OK' : 'NG';
+    return (
+      <div>
+        <div>月齢 : {sample.month} ヵ月</div>
+        <br/>
+        <div>適正体重 {sample.wRange[0]} - {sample.wRange[1]} kg</div>
+        <div>結果 : {wRet} ( {values.weight}kg ) </div>
+        <br/>
+        <div>適正身長 {sample.hRange[0]} - {sample.hRange[1]} cm</div>
+        <div>結果 : {hRet} ( {values.height}cm ) </div>
+      </div>
+    );
   }
 
   return (
@@ -66,6 +76,7 @@ function App() {
             justify="center"
             alignItems="center"
           >
+            <h2>乳幼児身体発達曲線チェッカー</h2>
             <GenderRadioBtnGroup onChange={handleChange('gender')} />
             <AgeSelect onChange={handleChange('age')} />
           </Grid>
